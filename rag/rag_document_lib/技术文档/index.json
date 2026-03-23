@@ -1,0 +1,20 @@
+{
+  "category_name": "技术文档",
+  "update_time": "2026-03-23 14:22:24",
+  "documents": [
+    {
+      "doc_name": "FastAPI框架使用指南.txt",
+      "doc_path": "rag_document_lib/技术文档/FastAPI框架使用指南.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-09 17:29:20",
+      "summary": "在此输入摘要"
+    },
+    {
+      "doc_name": "Python开发环境配置.txt",
+      "doc_path": "rag_document_lib/技术文档/Python开发环境配置.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-09 17:28:15",
+      "summary": "在此输入摘要"
+    }
+  ]
+}

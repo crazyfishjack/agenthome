@@ -1,0 +1,6 @@
+@echo off
+echo Starting AgentHome...
+echo.
+echo Running python main.py...
+echo.
+python main.py

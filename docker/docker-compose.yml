@@ -1,0 +1,41 @@
+# AgentHome Docker Compose - 开发模式
+# 支持热更新，挂载整个项目目录
+
+version: '3.8'
+
+services:
+  agenthome:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: agenthome
+    ports:
+      - "8000:8000"  # 后端 API 端口
+      - "3000:3000"  # 前端开发服务器端口
+    volumes:
+      # 挂载整个项目目录（支持热更新）
+      - ../backend:/app/backend
+      - ../frontend/src:/app/frontend/src
+      - ../frontend/public:/app/frontend/public
+      - ../data:/app/data
+      - ../skills:/app/skills
+      - ../rag:/app/rag
+      # 挂载 .env 文件
+      - ../.env:/app/.env
+      # 排除 node_modules 和 __pycache__
+      - /app/frontend/node_modules
+      - /app/__pycache__
+      - /app/backend/__pycache__
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - VITE_HOST=0.0.0.0
+      - DATABASE_URL=sqlite:///./data/database.db
+      - UPLOAD_DIR=./data/uploads
+      - CORS_ORIGINS=["*"]
+      # API Keys（根据需要配置）
+      # - OPENAI_API_KEY=your_api_key_here
+      # - OPENAI_API_BASE=https://api.openai.com/v1
+    restart: unless-stopped
+    stdin_open: true
+    tty: true

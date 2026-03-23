@@ -1,0 +1,30 @@
+{
+  "mcps": [
+    {
+      "mcp_id": "mcp_1772797569.313757",
+      "name": "联网搜索",
+      "description": null,
+      "mode": "remote",
+      "config": {
+        "type": "streamable_http",
+        "url": "https://mcp.api-inference.modelscope.net/a9222604d8a54a/mcp"
+      },
+      "enabled": true,
+      "added_at": "2026-03-06T19:46:10.011822"
+    },
+    {
+      "mcp_id": "mcp_1773032908.314993",
+      "name": "反扒搜索",
+      "description": "使用必应中文搜索引擎搜索信息。返回搜索结果包括标题、链接和摘要。",
+      "mode": "stdio",
+      "config": {
+        "command": "npx",
+        "args": [
+          "bing-cn-mcp-enhanced"
+        ]
+      },
+      "enabled": true,
+      "added_at": "2026-03-09T13:08:28.317858"
+    }
+  ]
+}

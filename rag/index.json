@@ -1,0 +1,20 @@
+{
+  "category_name": "产品手册",
+  "update_time": "2026-03-10 10:13:25",
+  "documents": [
+    {
+      "doc_name": "产品A用户手册.txt",
+      "doc_path": "rag_document_lib/产品手册/产品A用户手册.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-09 17:30:18",
+      "summary": "产品A是一款面向企业的智能数据分析平台，提供数据接入、清洗、分析、可视化和报告生成全流程功能。支持数据库（MySQL、Oracle等）及Excel/CSV/JSON文件导入；内置描述性、预测性与聚类分析算法；涵盖折线图、热力图等多种图表及可定制仪表板；支持自动/手动报告导出为PDF、Excel等格式。权限管理细化至项目、数据源和字段级，保障数据安全。平台采用SSL加密与私有化部署选项，并提供多渠道技术支持。最新版本v2.0.0新增AI智能分析与性能优化。（198字）"
+    },
+    {
+      "doc_name": "产品B技术规格.txt",
+      "doc_path": "rag_document_lib/产品手册/产品B技术规格.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-09 17:30:51",
+      "summary": "产品B是一款高性能、高可用的分布式存储系统，支持PB级数据存储与百万级QPS，适用于大数据、日志、文件存储及数据湖等场景。采用无中心节点的分布式架构，基于Raft协议实现强一致性，具备自动分片、多副本和负载均衡能力。硬件支持最低4核/16GB/500GB SSD，推荐8核/32GB/1TB NVMe；软件需Linux、Python 3.8+、Docker 20.10+及Kubernetes 1.20+。提供RESTful API与多语言SDK，支持AES-256加密、JWT认证、RBAC、TLS 1.3及DDoS防护。支持单机、集群及主流云平台部署，具备完善监控、备份恢复与运维管理能力。"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "category_name": "产品手册",
+  "update_time": "2026-03-16 02:48:25",
+  "documents": [
+    {
+      "doc_name": "产品技术.txt",
+      "doc_path": "rag_document_lib/产品手册/产品技术.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-11 11:51:55",
+      "summary": "在此输入摘要"
+    },
+    {
+      "doc_name": "产品技术规格.txt",
+      "doc_path": "rag_document_lib/产品手册/产品技术规格.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-09 17:30:51",
+      "summary": "在此输入摘要"
+    },
+    {
+      "doc_name": "产品用户手册.txt",
+      "doc_path": "rag_document_lib/产品手册/产品用户手册.txt",
+      "doc_type": "txt",
+      "update_time": "2026-03-09 17:30:18",
+      "summary": "在此输入摘要"
+    }
+  ]
+}

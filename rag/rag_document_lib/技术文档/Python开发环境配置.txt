@@ -1,0 +1,232 @@
+# Python开发环境配置指南
+
+## 1. Python安装
+
+### 1.1 Windows系统
+1. 访问Python官网：https://www.python.org/downloads/
+2. 下载Python 3.12或更高版本
+3. 运行安装程序，勾选"Add Python to PATH"
+4. 验证安装：打开命令行，输入`python --version`
+
+### 1.2 macOS系统
+1. 使用Homebrew安装：`brew install python`
+2. 或从官网下载安装包
+3. 验证安装：打开终端，输入`python3 --version`
+
+### 1.3 Linux系统
+1. Ubuntu/Debian：`sudo apt-get install python3`
+2. CentOS/RHEL：`sudo yum install python3`
+3. 验证安装：`python3 --version`
+
+## 2. 虚拟环境管理
+
+### 2.1 venv（Python内置）
+```bash
+# 创建虚拟环境
+python -m venv myenv
+
+# 激活虚拟环境
+# Windows
+myenv\Scripts\activate
+# macOS/Linux
+source myenv/bin/activate
+
+# 退出虚拟环境
+deactivate
+```
+
+### 2.2 conda
+```bash
+# 创建环境
+conda create -n myenv python=3.12
+
+# 激活环境
+conda activate myenv
+
+# 退出环境
+conda deactivate
+```
+
+### 2.3 pipenv
+```bash
+# 安装pipenv
+pip install pipenv
+
+# 创建环境并安装依赖
+pipenv install
+
+# 激活环境
+pipenv shell
+
+# 退出环境
+exit
+```
+
+## 3. 常用库安装
+
+### 3.1 数据科学
+```bash
+pip install numpy pandas matplotlib seaborn
+```
+
+### 3.2 机器学习
+```bash
+pip install scikit-learn tensorflow pytorch
+```
+
+### 3.3 Web开发
+```bash
+pip install django flask fastapi
+```
+
+### 3.4 数据库
+```bash
+pip install sqlalchemy pymongo redis
+```
+
+## 4. IDE配置
+
+### 4.1 VS Code
+1. 安装Python扩展
+2. 配置Python解释器路径
+3. 安装代码格式化工具（Black、isort）
+4. 配置调试器
+
+### 4.2 PyCharm
+1. 下载并安装PyCharm
+2. 创建新项目，选择Python解释器
+3. 配置代码风格检查（PEP 8）
+4. 设置版本控制（Git）
+
+### 4.3 Jupyter Notebook
+```bash
+pip install jupyter
+jupyter notebook
+```
+
+## 5. 代码规范
+
+### 5.1 PEP 8
+- 使用4个空格缩进
+- 每行不超过79个字符
+- 使用空行分隔函数和类
+- 导入语句放在文件顶部
+
+### 5.2 类型提示
+```python
+from typing import List, Dict, Optional
+
+def process_data(
+    data: List[Dict[str, Any]],
+    threshold: Optional[float] = None
+) -> Dict[str, Any]:
+    pass
+```
+
+### 5.3 文档字符串
+```python
+def calculate_sum(a: int, b: int) -> int:
+    """
+    计算两个整数的和
+
+    Args:
+        a: 第一个整数
+        b: 第二个整数
+
+    Returns:
+        两个整数的和
+    """
+    return a + b
+```
+
+## 6. 调试技巧
+
+### 6.1 print调试
+```python
+print(f"变量a的值: {a}")
+print(f"变量b的类型: {type(b)}")
+```
+
+### 6.2 logging模块
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+logger.info("这是一条信息日志")
+logger.error("这是一条错误日志")
+```
+
+### 6.3 pdb调试器
+```bash
+python -m pdb your_script.py
+```
+
+## 7. 性能优化
+
+### 7.1 使用生成器
+```python
+# 不好的做法
+def get_large_list():
+    return [i for i in range(1000000)]
+
+# 好的做法
+def get_large_generator():
+    for i in range(1000000):
+        yield i
+```
+
+### 7.2 使用内置函数
+```python
+# 使用map、filter、reduce
+result = map(lambda x: x**2, range(10))
+result = filter(lambda x: x > 5, range(10))
+```
+
+### 7.3 缓存结果
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def expensive_function(x):
+    # 昂贵的计算
+    return result
+```
+
+## 8. 测试
+
+### 8.1 unittest
+```python
+import unittest
+
+class TestMath(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+### 8.2 pytest
+```bash
+pip install pytest
+pytest tests/
+```
+
+## 9. 部署
+
+### 9.1 Docker
+```dockerfile
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
+```
+
+### 9.2 云平台部署
+- AWS Lambda
+- Google Cloud Functions
+- Azure Functions

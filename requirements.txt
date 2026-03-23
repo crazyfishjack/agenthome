@@ -1,0 +1,26 @@
+# FastAPI Web框架
+fastapi>=0.104.0
+starlette>=0.27.0
+uvicorn[standard]>=0.24.0
+
+# 数据验证和配置
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# HTTP客户端
+httpx>=0.24.0
+websockets>=12.0
+
+# LangChain生态
+langchain>=1.2.0
+langchain-core>=0.1.0
+langchain-community>=0.0.20
+langchain-openai>=0.0.5
+langgraph>=0.0.50
+langgraph-checkpoint-sqlite>=2.0.0
+
+# DeepAgent框架
+deepagents>=0.4.0
+
+# 其他工具
+pyyaml>=6.0

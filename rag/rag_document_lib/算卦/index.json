@@ -1,0 +1,20 @@
+{
+  "category_name": "算卦",
+  "update_time": "2026-03-10 14:21:52",
+  "documents": [
+    {
+      "doc_name": "五行.md",
+      "doc_path": "rag_document_lib/算卦/五行.md",
+      "doc_type": "md",
+      "update_time": "2026-03-10 14:05:22",
+      "summary": "五行简介"
+    },
+    {
+      "doc_name": "五行学说.pdf",
+      "doc_path": "rag_document_lib/算卦/五行学说.pdf",
+      "doc_type": "pdf",
+      "update_time": "2026-03-10 13:55:58",
+      "summary": "五行相生相克关系"
+    }
+  ]
+}
